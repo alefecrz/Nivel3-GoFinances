@@ -102,8 +102,8 @@ const Dashboard: React.FC = () => {
               <tr key={transaction.id}>
                 <td className="title">{transaction.title}</td>
                 { transaction.type === 'income' ?
-                  <td className="income">R$ {formatValue(transaction.value)}</td> :
-                  <td className="outcome">- R$ {formatValue(transaction.value)}</td>
+                  <td className="income">{formatValue(transaction.value)}</td> :
+                  <td className="outcome">- {formatValue(transaction.value)}</td>
                 }
                 <td>{transaction.category.title}</td>
                 <td>{formatDate(transaction.created_at)}</td>
